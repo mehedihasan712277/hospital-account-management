@@ -1,6 +1,10 @@
+import SideBar from "@/components/shared/SideBar"
+
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <SideBar></SideBar>
+    </div>
   )
 }
 
