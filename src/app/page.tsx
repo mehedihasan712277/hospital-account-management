@@ -3,7 +3,7 @@ import SideBar from "@/components/shared/SideBar"
 const page = () => {
   return (
     <div>
-      <SideBar></SideBar>
+      main content
     </div>
   )
 }
