@@ -23,10 +23,10 @@ export default function RootLayout({
         <body className={inter.className}>
           <SideBar></SideBar>
           <Navbar></Navbar>
-          <div className="lg:ml-[20vw] lg:mt-[110px] lg:px-[30px] bg-[#ececec] h-screen overflow-y-auto">
-            <div>
-              {children}
-            </div>
+          <div className="fixed left-[20vw] top-[110px] bottom-0 right-0 lg:px-[30px] bg-[#ececec]  overflow-y-auto">
+
+            {children}
+
           </div>
         </body>
       </html>
