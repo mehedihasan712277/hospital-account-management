@@ -23,7 +23,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <SideBar></SideBar>
           <Navbar></Navbar>
-          <div className="lg:pl-[21vw] lg:pt-[110px] bg-[#ececec] min-h-screen">
+          <div className="lg:pl-[21vw] lg:pt-[110px] bg-[#ececec] h-screen overflow-y-scroll">
             {children}
           </div>
         </body>

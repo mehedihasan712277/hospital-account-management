@@ -3,9 +3,10 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from 'react';
+import { currencyValues } from '@/utils/temporaryData';
 
-const Dropdown = () => {
-    const [age, setAge] = useState('5');
+const CurrencyList = () => {
+    const [age, setAge] = useState("2");
 
     const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value);
@@ -34,14 +35,15 @@ const Dropdown = () => {
                         },
                     }}
                 >
-                    <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={5}>Dollar</MenuItem>
-                    <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={10}>Ten</MenuItem>
-                    <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={20}>Twenty</MenuItem>
-                    <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={30}>Thirty</MenuItem>
+                    {
+                        currencyValues.map(ele => {
+                            return <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={ele.id}>{ele.currency}</MenuItem>
+                        })
+                    }
                 </Select>
             </FormControl>
         </div>
     );
 };
 
-export default Dropdown;
+export default CurrencyList;
