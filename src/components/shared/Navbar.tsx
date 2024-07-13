@@ -1,7 +1,10 @@
 "use client"
 import { usePathname } from "next/navigation"
 import { menuItems } from "./SideBar"
-import { Button } from "@mui/material"
+import { Badge, Button } from "@mui/material"
+import SearchBox from "../ui/SearchBox"
+import Dropdown from "../ui/Dropdown"
+import { NotificationsNone } from "@mui/icons-material"
 
 const Navbar = () => {
     const pathname = usePathname()
@@ -23,10 +26,16 @@ const Navbar = () => {
                 <p className="text-[32px] font-bold text-[#05061B]">{title}</p>
                 <p className="text-xs text-gray-300">Dashboard - home</p>
             </div>
-            <div>
-                <Button variant="outlined">Content</Button>
-                <Button variant="outlined">Content</Button>
-                <Button variant="outlined">Content</Button>
+            <div className="flex items-center gap-[10px]">
+                <SearchBox></SearchBox>
+                <Dropdown></Dropdown>
+                <Button variant="outlined" sx={{ height: 50, width: 50, borderColor: "#697AD2" }}>
+                    <Badge color="secondary" badgeContent={333}>
+                        <span className="text-[#697AD2]">
+                            <NotificationsNone></NotificationsNone>
+                        </span>
+                    </Badge>
+                </Button>
                 <Button variant="outlined">Content</Button>
             </div>
         </nav>
