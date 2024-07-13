@@ -37,7 +37,7 @@ const CurrencyList = () => {
                 >
                     {
                         currencyValues.map(ele => {
-                            return <MenuItem sx={{ margin: "0px 10px", borderRadius: "4px" }} value={ele.id}>{ele.currency}</MenuItem>
+                            return <MenuItem key={ele.id} sx={{ margin: "0px 10px", borderRadius: "4px" }} value={ele.id}>{ele.currency}</MenuItem>
                         })
                     }
                 </Select>

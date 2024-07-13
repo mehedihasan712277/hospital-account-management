@@ -49,7 +49,7 @@ const NotificationList = () => {
             >
                 <div className="p-[20px] space-y-4 w-[300px]">
                     {
-                        notifications.map(ele => <p className="rounded bg-[#F2F2F2] p-4">{ele.notification}</p>)
+                        notifications.map(ele => <p key={ele.id} className="rounded bg-[#F2F2F2] p-4">{ele.notification}</p>)
                     }
                 </div>
             </Popover>
